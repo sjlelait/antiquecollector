@@ -1,0 +1,45 @@
+<!-- NOTE: load static informs the server that static assets are needed --> 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Materialize jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {% block title %}
+    <title>Antique Collector</title>
+    {% endblock %}
+</head>
+<body>
+    <header class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper amber lighten-1">
+                <a class="left brand-logo" href="{% url 'home' %}">Antique Collector</a>
+                <ul class="right">
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'cats_index' %}">View All Antiques</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        {% block content %} 
+        {% endblock %}
+    </main>
+    <footer class="page-footer amber">
+        <p>Copyright &copy; All Rights Reserved Antique Collector {% now "Y" %}</p>
+    </footer>
+</body>
+</html>
