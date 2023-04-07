@@ -12,6 +12,10 @@
             <p>Material: {{ antique.material }}</p>
             <p>Description: {{ antique.description }}</p>
         </div>
+        <div class="card-action">
+            <a href="{% url 'antique_update' antique.id %}">Edit</a>
+            <a href="{% url 'antique_delete' antique.id %}">Delete</a>
+        </div>
     </div>
 
     {% endblock %}
