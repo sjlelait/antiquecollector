@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Antiques List</title>
+{% endblock %}
+
+{% block content %}
+<h1>Antiques List</h1>
+
+<!-- NOTE: DTL (django template language) is NOT python, but it looks similar -->
+{% for antique in antiques %}
+<a href="{% url 'antiques_detail' antique.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ antique.name }}</span>
+            <p>Material: {{ antique.material }}</p>
+            <p>Description: {{ antique.description }}</p>
+        </div>
+    </div>
+</a>
+{% endfor %}
+{% endblock %}
