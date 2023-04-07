@@ -29,5 +29,5 @@ class AntiqueUpdate(UpdateView):
 
 class AntiqueDelete(DeleteView):
     model = Antique
-    success_url = 'antiques/'
+    success_url = '/antiques/'
     template_name = 'antiques/antique_confirm_delete.html'
