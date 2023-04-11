@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Admirer detail</title>
+{% endblock %}
+
+{% block content %}
+<h1>Admirer Detail</h1>
+
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ admirer.name }}</span>
+        <p>Location: {{ admirer.location }}</p>
+    </div>
+    <div class="card-action">
+        <a href="{% url 'admirer_update' admirer.id %}">Edit</a>
+        <a href="{% url 'admirer_delete' admirer.id %}">Delete</a>
+    </div>
+</div>
+
+{% endblock %}
