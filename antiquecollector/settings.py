@@ -30,7 +30,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['antiquecollector.herokuapp.com']
+ALLOWED_HOSTS = ['antiquecollector.herokuapp.com'] # put your own site
 
 
 # Application definition
