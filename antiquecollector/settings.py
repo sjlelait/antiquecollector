@@ -82,7 +82,11 @@ WSGI_APPLICATION = 'antiquecollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'antiquecollector',
+        'NAME': 'Sjlelait/antique_collector',
+        'USER': os.environ['USER'],
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
     }
 }
 
