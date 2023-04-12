@@ -17,4 +17,5 @@ urlpatterns = [
     path('admirers/<int:pk>/delete/', views.AdmirerDelete.as_view(), name='admirer_delete'),
     path('antiques/<int:antique_id>/assoc_admirer/<int:admirer_id>/', views.assoc_admirer, name='assoc_admirer'),
     path('antiques/<int:antique_id>/unassoc_admirer/<int:admirer_id>/', views.unassoc_admirer, name='unassoc_admirer'),
+    path('accounts/signup/', views.signup, name='signup'),
 ]
