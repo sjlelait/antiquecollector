@@ -48,12 +48,12 @@ def unassoc_admirer(request, antique_id, admirer_id):
 
 class AntiqueCreate(CreateView):
     model = Antique
-    fields = '__all__'
+    fields = ('name', 'material', 'description' )
     template_name = 'antiques/antique_form.html'
 
 class AntiqueUpdate(UpdateView):
     model = Antique
-    fields = ('name', 'description')
+    fields = ('name', 'material', 'description')
     template_name = 'antiques/antique_form.html'
 
 class AntiqueDelete(DeleteView):

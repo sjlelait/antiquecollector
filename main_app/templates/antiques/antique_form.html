@@ -13,7 +13,7 @@
 <h1>Update {{object.name}}</h1>
 {% else %}
 <h1>Create Antique</h1>
-{% endif%}
+{% endif %}
 <form method="POST">
     {% csrf_token %}
     {{ form }}
