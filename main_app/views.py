@@ -60,7 +60,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('cats_index')
+            return redirect('antiques_index')
         else:
             print(form.errors)
             error_message = 'Invalid Signup - Try Again'
